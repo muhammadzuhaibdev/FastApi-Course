@@ -1,0 +1,16 @@
+CREATE TABLE todo (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255) UNIQUE NOT NULL,
+  description TEXT,
+  status BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT into
+  todo (title, description, status)
+VALUES
+  ('Lahore', 'Any description', TRUE)
+
+SELECT * FROM todo
+
+SELECT * FROM todo WHERE id=0;
